@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Portal | O&M TV</title>
+
+        <!-- Fonts -->
+        <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+        <!-- CSS -->
+        <link href="css/carimbo.min.css" rel="stylesheet" />
+        <link href="css/select2.min.css" rel="stylesheet" />
+
+    </head>
+
+    <body id="page-top">
+
+        <!-- Página Wrapper -->
+        <div id="wrapper">
+
+            <!-- Barra Lateral -->
+            <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+                <!-- Sidebar - Brand -->
+                <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                    <div class="sidebar-brand-icon">
+                        <i class="fas fa-tv"></i>
+                    </div>
+                    <div class="sidebar-brand-text mx-3">Portal <br />O&M TV</div>
+                </a>
+
+                <!-- Divider >
+                <hr class="sidebar-divider my-0">
+
+                < Nav Item - Dashboard >
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                        <i class="fas fa-fw fa-tachometer-alt"></i>
+                        <span>Dashboard</span></a>
+                </li -->
+
+                <!-- Divider -->
+                <hr class="sidebar-divider">
+
+                <!-- Heading -->
+                <div class="sidebar-heading">
+                    Abertura de TA
+                </div>
+                
+                <!-- Nav Item - Charts -->
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                        <i class="fas fa-fw fa-newspaper"></i>
+                        <span>Novo Carimbo</span>
+                    </a>
+                </li>
+
+                <!-- Divider -->
+                <hr class="sidebar-divider d-none d-md-block">
+
+                <!-- Sidebar Toggler (Sidebar) >
+                <div class="text-center d-none d-md-inline">
+                    <button class="rounded-circle border-0" id="sidebarToggle"></button>
+                </div -->
+
+            </ul>
+            <!-- End of Sidebar -->
+
+            <!-- Content Wrapper -->
+            <div id="content-wrapper" class="d-flex flex-column">
+
+                <!-- Main Content -->
+                <div id="content">
+
+                    <!-- Topbar -->
+                    <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                        <!-- Sidebar Toggle (Topbar) -->
+                        <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                            <i class="fa fa-bars"></i>
+                        </button>
+
+                        <!-- Topbar Navbar -->
+                        <ul class="navbar-nav ml-auto">
+
+                            <!-- Nav Item - Pesquisa Dropdown (Visible Only XS) -->
+                            <li class="nav-item dropdown no-arrow d-sm-none">
+                                <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fas fa-search fa-fw"></i>
+                                </a>
+                                <!-- Dropdown - Mensagem -->
+                                <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                    aria-labelledby="searchDropdown">
+                                    <form class="form-inline mr-auto w-100 navbar-search">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control bg-light border-0 small"
+                                                placeholder="Pesquisar..." aria-label="Search"
+                                                aria-describedby="basic-addon2">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-primary" type="button">
+                                                    <i class="fas fa-search fa-sm"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </li>
+
+                            <div class="topbar-divider d-none d-sm-block"></div>
+
+                            <!-- Nav Item - User Information -->
+                            <li class="nav-item dropdown no-arrow">
+                                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="mr-2 d-none d-lg-inline text-gray-600 small">User VOC</span>
+                                    <img class="img-profile rounded-circle"
+                                        src="img/undraw_profile.svg">
+                                </a>
+                                
+                            </li>
+
+                        </ul>
+
+                    </nav>
+                    <!-- End of Topbar -->
+
+                    <!-- Begin Page Content -->
+                    <div class="container-fluid">
+
+                        <!-- Page Heading -->
+                        <h1 class="h3 mb-2 text-gray-800">Novo Carimbo </h1>
+                        <p class="mb-4">Padrão de abertura de TA's, envio de mensagens no Grupo O&M Eventos críticos e Informes TTMC.</p>
+                        
+                        <!-- Content Row -->
+                        <div class="row">
+
+                            <div class="col-xl-12 col-lg-7">
+
+                                <!-- Carimbo -->
+                                <div class="card shadow mb-4">
+                                    <div class="card-header py-3">
+                                        <h6 class="m-0 font-weight-bold text-primary">Carimbo de Canais</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="col-xl-8 col-lg-6">  
+                                            <form id="form">
+                                                <!-- Checkbox da tecnologia -->
+                                                <div class="form-group mb-3">
+                                                    <label for="exampleFormControlInput1" class="form-label">Tecnologia Afetada: </label>     
+                                                    <select class="form-select form-control" id="tecnologia" name="tecnologia" multiple>
+                                                        <option></option>
+                                                        <option value="IPTV - Open Platform">IPTV - Open Platform</option>
+                                                        <option value="IPTV - Mediaroom">IPTV - Mediaroom</option>
+                                                        <option value="OTT">OTT</option>
+                                                    </select>                                                    
+                                                </div>
+                                                <!-- Canais Afetados -->
+                                                <div class="form-group mb-3">
+                                                    <label for="exampleFormControlInput1" class="form-label">Tipo Afetado: </label>     
+                                                    <select class="form-select form-control" id="tipo" name="tipo" multiple>
+                                                        <option></option>
+                                                        <option>Todos</option>
+                                                        <option>Locais</option>
+                                                        <option>Nacionais</option>
+                                                    </select>
+                                                </div>
+                                                <!-- Checkbox da Cluster -->
+                                                <div class="form-group mb-3">
+                                                    <label for="exampleFormControlInput1" class="form-label">Cluster: </label>     
+                                                    <select class="form-select form-control" id="cluster" name="cluster" multiple>
+                                                        <option></option>
+                                                        <option value="BLM">BLM</option>
+                                                        <option value="BSA">BSA</option>
+                                                        <option value="CTA">CTA</option>
+                                                        <option value="FLA">FLA</option>
+                                                        <option value="MNS">MNS</option>
+                                                        <option value="RJO">RJO</option>
+                                                        <option value="SPO">SPO</option>
+                                                    </select>                                                    
+                                                </div>
+                                                <!-- Checkbox da HE | Cidades -->
+                                                <div class="form-group mb-3">
+                                                    <label for="exampleFormControlInput1" class="form-label">HE | Cidades: </label>     
+                                                    <select class="form-select form-control" id="he" name="he" multiple>
+                                                        <option></option>
+                                                        <option>HE Bagé</option>
+                                                        <option>HE Blumenau</option>
+                                                        <option>HE Cachoeira do Sul</option>
+                                                        <option>HE Cascavel</option>
+                                                        <option>HE Caxias do Sul</option>
+                                                        <option>HE Concórdia</option>
+                                                        <option>HE Criciúma</option>
+                                                        <option>HE Erechim</option>
+                                                        <option>HE Foz do Iguaçú</option>
+                                                        <option>HE Guarapuava</option>
+                                                        <option>HE Ijuí</option>
+                                                        <option>HE Itajaí</option>
+                                                        <option>HE Joinville</option>
+                                                        <option>HE Lajes</option>
+                                                        <option>HE Londrina</option>
+                                                        <option>HE Maringá</option>
+                                                        <option>HE Paranavaí</option>
+                                                        <option>HE Pelotas</option>
+                                                        <option>HE Perdizes</option>
+                                                        <option>HE Pinhais</option>
+                                                        <option>HE Ponta Grossa</option>
+                                                        <option>HE Porto Alegre</option>
+                                                        <option>HE Porto Alegre CG</option>
+                                                        <option>HE Porto Alegre IND</option>
+                                                        <option>HE Santa Maria</option>
+                                                        <option>HE Santa Rosa</option>
+                                                        <option value="sao_josé">HE São José</option>
+                                                        <option value="uruguaiana">HE Uruguaiana</option>
+                                                    </select>                                                    
+                                                </div>
+                                                <!-- Lineup -->
+                                                <div class="form-group mb-3">
+                                                    <label for="exampleFormControlInput1" class="form-label">Canais Afetados: </label>       
+                                                    <select class="form-select form-control" id="lineup" name="lineup" multiple>
+                                                        <option></option>
+                                                        <option>515 - TV Anhanguera Anápolis - TV Globo HD</option>
+                                                        <option>514 - SBT Vale HD</option>
+                                                        <option>515 - TV Sergipe - TV Globo HD</option>
+                                                        <option>516 - TV Atalaia - Record HD</option>
+                                                        <option>515 - RBS - TV Globo HD</option>
+                                                        <option>515 - RBS TV Bagé - Globo
+                                                        <option>514 - SBT Belém HD</option>
+                                                        <option>515 - TV Liberal Belém - TV Globo HD</option>
+                                                        <option>516 - Record TV Belém HD</option>
+                                                        <option>519 - RBA TV - Band HD</option>
+                                                        <option>519 - Band Minas BH HD</option>
+                                                        <option>516 - TV Minas BH - Record HD</option>
+                                                        <option>514 - TV Alterosa - SBT HD</option>
+                                                        <option>515 - TV Globo Belo Horizonte - TV Globo HD</option>
+                                                        <option>515 - NSC TV - TV Globo HD</option>
+                                                        <option>516 - NDTV (Blumenau) - Record HD</option>
+                                                        <option>517 - TV Brasília - Rede TV! HD</option>
+                                                        <option>9 - TV Câmara Distrital</option>
+                                                        <option>514 - SBT Brasília HD</option>
+                                                        <option>515 - Globo Brasília HD</option>
+                                                        <option>516 - Record Brasília HD</option>
+                                                        <option>519 - Band Brasília HD</option>
+                                                        <option>515 - Inter TV Alto Litoral - TV Globo HD</option>
+                                                        <option>515 - RBS TV (Santa Cruz) - TV Globo HD</option>
+                                                        <option>515 - TV Gazeta Sul - TV Globo HD</option>
+                                                        <option>514 - TV Borborema - SBT HD</option>
+                                                        <option>515 - Inter TV Planicíes - TV Globo HD</option>
+                                                        <option>514 - TV Campo Grande - SBT HD</option>
+                                                        <option>515 - TV Morena - TV Globo HD</option>
+                                                        <option>516 - Rede MS - Record HD</option>
+                                                        <option>519 - TV Interativa - Band HD</option>
+                                                        <option>514 - Rede Massa TV Naipi - SBT HD</option>
+                                                        <option>515 - RPC Cascavel - TV Globo HD</option>
+                                                        <option>516 - RIC TV Oeste - Record HD</option>
+                                                        <option>519 - TV Tarobá Cascavel - Band HD</option>
+                                                        <option>515 - TV Paraíba - TV Globo HD</option>
+                                                        <option>515 - TV Liberal Castanhal - TV Globo HD</option>
+                                                        <option>519 - RBA TV Castanhal - Band HD</option>
+                                                        <option>514 - TV Paraense - SBT HD</option>
+                                                        <option>515 - TV Anhanguera Catalão HD</option> - TV Globo HD</option>
+                                                        <option>515 - RBS - TV Globo HD</option>
+                                                        <option>515 - TV Gazeta Noroeste - TV Globo HD</option>
+                                                        <option>515 - NSC TV - TV Globo HD</option>
+                                                        <option>516 - NDTV - Record HD</option>
+                                                        <option>515 - NSC TV Criciúma - TV Globo HD</option>
+                                                        <option>516 - TV Vila Real - Record HD</option>
+                                                        <option>517 - TV Pantanal - Rede TV! HD</option>
+                                                        <option>519 - Band Cuiabá HD</option>
+                                                        <option>514 - SBT Cuiabá - SBT HD</option>
+                                                        <option>515 - TV Centro América - TV Globo HD</option>
+                                                        <option>586 - Record News Cuiabá HD</option>
+                                                        <option>586 - TV Diário - Record News HD</option>
+                                                        <option>515 - TV Integração - TV Globo HD</option>
+                                                        <option>514 - TV Alterosa - SBT HD</option>
+                                                        <option>515 - TV Morena Ponta Porã - TV Globo HD</option>
+                                                        <option>515 - RBS Erechim - TV Globo HD</option>
+                                                        <option>515 - TV Subaé - TV Globo HD</option>
+                                                        <option>514 - TV Jangadeiro - SBT HD</option>
+                                                        <option>516 - TV Cidade - Record HD</option>
+                                                        <option>519 - Nordes TV - Band HD</option>
+                                                        <option>515 - TV Verdes Mares - TV Globo HD</option>
+                                                        <option>515 - RPC Foz do Iguaçu - TV Globo HD</option>
+                                                        <option>515 - TV Asa Branca - TV Globo HD</option>
+                                                        <option>514 - TV Serra Dourada - SBT HD</option>
+                                                        <option>516 - TV Goiás - Record HD</option>
+                                                        <option>519 - TV Goiânia - Band HD</option>
+                                                        <option>515 - TV Anhanguera Goiânia - TV Globo HD</option>
+                                                        <option>515 - RPC Guarapuava - TV Globo HD</option>
+                                                        <option>515 - RBS TV (Cruz Alta) - TV Globo HD</option>
+                                                        <option>515 - TV Mirante Imperatriz - TV Globo HD</option>
+                                                        <option>515 - Inter TV dos Vales - TV Globo HD</option>
+                                                        <option>515 - TV Santa Cruz - TV Globo HD</option>
+                                                        <option>516 - Record TV Cabralia HD</option>
+                                                        <option>516 - NDTV - Record HD</option>
+                                                        <option>515 - TV Integração - TV Globo HD</option>
+                                                        <option>515 - TV Anhanguera Itumbiara - TV Globo HD</option>
+                                                        <option>519 - TV Sucesso - Record HD</option>
+                                                        <option>515 - TV Anhanguera (Jataí) - TV Globo HD</option>
+                                                        <option>514 - TV Tambaú - SBT HD</option>
+                                                        <option>515 - TV Cabo Branco - TV Globo HD</option>
+                                                        <option>516 - TV Correio - Record HD</option>
+                                                        <option>519 - TV Manaíra - Band HD</option>
+                                                        <option>515 - NSC TV - TV Globo HD</option>
+                                                        <option>516 - NDTV - Record HD</option>
+                                                        <option>515 - TV Verdes Mares Cariri - TV Globo HD</option>
+                                                        <option>514 - TV Alterosa - SBT HD</option>
+                                                        <option>515 - TV Integração - TV Globo HD</option>
+                                                        <option>514 - SCC SBT HD</option>
+                                                        <option>515 - NSC TV Centro-Oeste - TV Globo HD</option>
+                                                        <option>515 - TV Gazeta Norte - TV Globo HD</option>
+                                                        <option>515 - RPC - TV Globo HD</option>
+                                                        <option>516 - RIC TV - Record HD</option>
+                                                        <option>519 - TV Tarobá - Band HD</option>
+                                                        <option>514 - TV Cidade - SBT HD</option>
+                                                        <option>515 - TV Anhanguera Luziânia - TV Globo HD</option>
+                                                        <option>514 - TV Amazônia - SBT HD</option>
+                                                        <option>515 - Rede Amazônica Macapá - TV Globo HD</option>
+                                                        <option>516 - TV Equinóquio - Record HD</option>
+                                                        <option>519 - TV Macapá - Band HD</option>
+                                                        <option>514 - TV Ponte Verde - SBT HD</option>
+                                                        <option>515 - TV Gazeta - TV Globo HD</option>
+                                                        <option>516 - TV Pajuçara - Record HD</option>
+                                                        <option>504 - TV A Crítica</option>
+                                                        <option>514 - TV Em Tempo - SBT HD</option>
+                                                        <option>515 - Rede Amazônica - TV Globo HD</option>
+                                                        <option>516 - Record Manaus HD</option>
+                                                        <option>517 - INOVA TV - Rede TV! HD</option>
+                                                        <option>519 - Band Manaus HD</option>
+                                                        <option>514 - TV Tibagi - SBT HD</option>
+                                                        <option>516 - RIC TV Maringá - Record HD</option>
+                                                        <option>515 - Inter TV Grande Minas - TV Globo HD</option>
+                                                        <option>515 - TV Inter Costa Branca - TV Globo HD</option>
+                                                        <option>514 - TV Ponta Negra - SBT HD</option>
+                                                        <option>516 - TV Tropical - Record HD</option>
+                                                        <option>519 - Band Natal HD</option>
+                                                        <option>515 - TV Inter Cabugi - TV Globo HD</option>
+                                                        <option>515 - Inter TV Serra - TV Globo HD</option>
+                                                        <option>514 - SBT Tocantins HD</option>
+                                                        <option>515 - TV Anhanguera - TV Globo HD</option>
+                                                        <option>517 - Rede TV! Tocantins HD</option>
+                                                        <option>515 - RPC Paranavaí - TV Globo HD</option>
+                                                        <option>517 - TV Pampa Sul HD</option> - Rede TV
+                                                        <option>515 - TV Pelotas - TV Globo HD</option>
+                                                        <option>508 - Rede Minas HD</option>
+                                                        <option>516 - Record TV Interior RJ HD</option>
+                                                        <option>516 - Record HD</option>
+                                                        <option>513 - TV Mais HD</option>
+                                                        <option>519 - BAND (Rede) HD</option>
+                                                        <option>513 - TV Horizonte HD</option>
+                                                        <option>515 - TV Grande Rio - TV Globo HD</option>
+                                                        <option>517 - REDETV HD</option>
+                                                        <option>519 - Band Bahia HD</option>
+                                                        <option>20 - CNT</option>
+                                                        <option>514 - Rede Massa - SBT HD</option>
+                                                        <option>515 - RPC - TV Globo HD</option>
+                                                        <option>516 - RIC TV - Record HD</option>
+                                                        <option>519 - Band Curitiba HD</option>
+                                                        <option>586 - Rede Mercosul - Record News HD</option>
+                                                        <option>23 - TV Pai Eterno</option>
+                                                        <option>514 - TV Alterosa Leste - SBT HD</option>
+                                                        <option>516 - TV Leste - Record HD</option>
+                                                        <option>519 - Band Maceió HD</option>
+                                                        <option>519 - TV Maringá - Band HD</option>
+                                                        <option>514 - Rede Massa - SBT HD</option>
+                                                        <option>515 - RPC - TV Globo HD</option>
+                                                        <option>514 - SBT RS HD</option>
+                                                        <option>517 - TV Pampa - Rede TV! HD</option>
+                                                        <option>513 - Ulbra TV - Cultura HD</option>
+                                                        <option>516 - Record RS HD</option>
+                                                        <option>519 - Band RS HD</option>
+                                                        <option>514 - TV Alterosa - SBT HD</option>
+                                                        <option>515 - EPTV Sul de Minas - TV Globo HD</option>
+                                                        <option>516 - TV Rede Mais Varginha - Record HD</option>
+                                                        <option>514 - TV Jornal Caruaru - SBT HD</option>
+                                                        <option>516 - TV Clube - Record HD</option>
+                                                        <option>519 - TV Tribuna - Band HD</option>
+                                                        <option>514 - TV Jornal - SBT HD</option>
+                                                        <option>515 - TV Globo Recife HD</option>
+                                                        <option>516 - Record Rio HD</option>
+                                                        <option>519 - Band Rio HD</option>
+                                                        <option>514 - SBT Rio HD</option>
+                                                        <option>515 - TV Globo HD</option>
+                                                        <option>515 - TV Anhanguera Rio Verde - TV Globo HD</option>
+                                                        <option>515 - TV Centro América Rondonópolis - TV Globo HD</option>
+                                                        <option>514 - SBT Rondonópolis - SBT HD</option>
+                                                        <option>516 - TV Cidade Rondonópolis - Record HD</option>
+                                                        <option>514 - TV Aratu - SBT HD</option>
+                                                        <option>517 - TV Arapuan - Rede TV! HD</option>
+                                                        <option>508 - TVE Bahia HD</option>
+                                                        <option>516 - TV Itapoan - Record HD</option>
+                                                        <option>515 - TV Bahia - TV Globo HD</option>
+                                                        <option>517 - TV Pampa - Rede TV! HD</option>
+                                                        <option>515 - RBS TV - TV Globo HD</option>
+                                                        <option>515 - RBS TV Santa Rosa - TV Globo HD</option>
+                                                        <option>519 - TV Catarina - Band HD</option>
+                                                        <option>515 - NSC TV - TV Globo HD</option>
+                                                        <option>516 - NDTV - Record HD</option>
+                                                        <option>586 - Record News SC HD</option>
+                                                        <option>514 - SBT HD</option>
+                                                        <option>514 - TV Difusora - SBT HD</option>
+                                                        <option>516 - Record TV Tocantins HD</option>
+                                                        <option>519 - TV Metropolitana - Band HD</option>
+                                                        <option>515 - RPC Maringá - TV Globo HD</option>
+                                                        <option>515 - TV Mirante - TV Globo HD</option>
+                                                        <option>517 - TV São Luis - Rede TV! HD</option>
+                                                        <option>516 - Record TV Tocantins HD</option>
+                                                        <option>515 - TV Centro América Sinop - TV Globo HD</option>
+                                                        <option>514 - TV Cidade de Sinop - SBT HD</option>
+                                                        <option>516 - TV Capital - Record HD</option>
+                                                        <option>514 - TV Cidade Verde - SBT HD</option>
+                                                        <option>515 - Clube - TV Globo HD</option>
+                                                        <option>516 - TV Antena 10 - Record HD</option>
+                                                        <option>519 - Band Teresina HD</option>
+                                                        <option>516 - TV Paranaíba - Record HD</option>
+                                                        <option>519 - Band Triângulo HD</option>
+                                                        <option>514 - TV Alterosa - SBT HD</option>
+                                                        <option>515 - TV Integração HD</option> - TV Globo
+                                                        <option>514 - TV Vitoriosa - SBT HD</option>
+                                                        <option>515 - TV Integração - TV Globo HD</option>
+                                                        <option>515 - RBS TV Uruguaiana - TV Globo HD</option>
+                                                        <option>514 - TV Tribuna - SBT HD</option>
+                                                        <option>516 - TV Vitória - Record HD</option>
+                                                        <option>519 - TV Capixaba - Band HD</option>
+                                                        <option>586 - Record News ES HD</option>
+                                                        <option>515 - TV Gazeta - TV Globo HD</option>
+                                                        <option>517 - Rede TV! ES HD</option>
+                                                        <option>515 - TV Sudoeste - TV Globo HD</option>
+                                                        <option>514 - SBT Nova Friburgo HD</option>
+                                                        <option>515 - TV Rio Sul - TV Globo HD</option>
+                                                        <option>519 - Band Rio Interior HD</option>
+                                                        <option>1 - Univesp TV</option>
+                                                        <option>8 - TV Aberta</option>
+                                                        <option>9 - TV Assembléia</option>
+                                                        <option>10 - Canal Universitário</option>
+                                                        <option>21 - Rede 21</option>
+                                                        <option>27 - RBI</option>
+                                                        <option>32 - TV Educação
+                                                        <option>513 - Cultura. HD</option>
+                                                        <option>514 - SBT HD</option>
+                                                        <option>515 - Globo São Paulo - TV Globo HD</option>
+                                                        <option>516 - Record HD</option>
+                                                        <option>517 - RedeTV! HD</option>
+                                                        <option>519 - Band HD</option>
+                                                        <option>520 - CBI HD</option>
+                                                        <option>522 - Ideal HD</option>
+                                                        <option>523 - Gospel HD</option>
+                                                        <option>528 - Polishop HD</option>
+                                                        <option>508 - TV Guarulhos HD</option>
+                                                        <option>239 - COM Brasil</option>
+                                                        <option>12 - TVT</option>
+                                                        <option>8 - Eco TV HD</option>
+                                                        <option>514 - SBT Interior HD</option>
+                                                        <option>515 - TV Fronteira - TV Globo HD</option>
+                                                        <option>516 - TV Rio Preto - Record HD</option>
+                                                        <option>519 - Band Paulista HD</option>
+                                                        <option>514 - TV Sorocaba - SBT HD</option>
+                                                        <option>515 - TV TEM Itapetininga - TV Globo HD</option>
+                                                        <option>516 - Record Paulista HD</option>
+                                                        <option>519 - Band Campinas HD</option>
+                                                        <option>514 - SBT Central HD</option>
+                                                        <option>515 - EPTV Central - TV Globo HD</option>
+                                                        <option>516 - Record Interior HD</option>
+                                                        <option>519 - TV Clube - Band HD</option>
+                                                        <option>515 - TV TEM SJRP - TV Globo HD</option>
+                                                        <option>514 - TV Thathi HD</option>
+                                                        <option>515 - TV Vanguarda Taubaté - TV Globo HD</option>
+                                                        <option>516 - Record Litoral HD</option>
+                                                        <option>519 - Band Vale HD</option>
+                                                        <option>515 - TV Vanguarda SJC - TV Globo HD</option>
+                                                        <option>516 - TVB Campinas - Record HD</option>
+                                                        <option>514 - SBT Ribeirão HD</option>
+                                                        <option>518 - TV Conecta HD</option>
+                                                        <option>515 - TV Diário Mogi das Cruzes HD</option> - TV Globo HD</option>
+                                                        <option>515 - TV TEM Bauru - TV Globo HD</option>
+                                                        <option>514 - VTV SBT HD</option>
+                                                        <option>515 - EPTV Campinas - TV Globo HD</option>
+                                                        <option>20 - CNT Americana</option>
+                                                        <option>515 - TV TEM Sorocaba - TV Globo HD</option>
+                                                        <option>515 - EPTV Ribeirão - TV Globo HD</option>
+                                                        <option>10 - TV Santa Cecília</option>
+                                                        <option>11 - TV Ilha do Sol</option>
+                                                        <option>514 - TVB Santos - Band HD</option>
+                                                        <option>515 - TV Tribuna Santos - TV Globo HD</option>
+                                                        <option>516 - VTV SBT Santos HD</option>
+                                                        <option>518 - TV Cultura Litoral HD</option>
+                                                        <option>9 - TV Câmara Ribeirão Preto</option>
+                                                        <option>9 - TV Câmara de Campinas</option>
+                                                        <option>10 - Canal Universitário UNICAMP</option>
+                                                        <option>8 - TV Sol</option>
+                                                        <option>8 - TV Itapê</option>
+                                                        <option>12 - Rede Família</option>
+                                                        <option>8 - TV Osasco</option>
+                                                        <option>12 - NGT</option>
+                                                        <option>9 - TV Câmara de Piracicaba</option>
+                                                        <option>19 - TV Ativa</option>
+                                                        <option>8 - Canal Comunitário de Santos</option>
+                                                        <option>19 - TV 100% Vida Santos</option>
+                                                        <option>9 - TV Câmara SJC</option>
+                                                        <option>10 - TV Univap SJC</option>
+                                                        <option>19 - Boa Vontade TV</option>
+                                                        <option>9 - TV Câmara de Valinhos</option>
+                                                        <option>645 - A&E HD</option>
+                                                        <option>145 - A&E SD</option>
+                                                        <option>587 - Agro+ HD</option>
+                                                        <option>639 - AMC</option>
+                                                        <option>595 - Animal Planet HD</option>
+                                                        <option>95 - Animal Planet SD</option>
+                                                        <option>627 - Arte 1 HD</option>
+                                                        <option>127 - Arte 1 SD</option>
+                                                        <option>804 - Áudio: Axé</option>
+                                                        <option>813 - Áudio: Blues</option>
+                                                        <option>805 - Áudio: Bossa Nova</option>
+                                                        <option>811 - Áudio: Forró</option>
+                                                        <option>814 - Áudio: Gospel</option>
+                                                        <option>817 - Áudio: Jazz Clássico</option>
+                                                        <option>806 - Áudio: Lounge</option>
+                                                        <option>800 - Áudio: MPB</option>
+                                                        <option>812 - Áudio: Música Clássica</option>
+                                                        <option>815 - Áudio: Música para Crianças</option>
+                                                        <option>807 - Áudio: Pop Internacional</option>
+                                                        <option>803 - Áudio: Rock Brasil</option>
+                                                        <option>802 - Áudio: Rock Clássico</option>
+                                                        <option>801 - Áudio: Samba & Pagode</option>
+                                                        <option>816 - Áudio: Sertanejo</option>
+                                                        <option>808 - Áudio: Sucesso dos Anos 70</option>
+                                                        <option>809 - Áudio: Sucesso dos Anos 80</option>
+                                                        <option>810 - Áudio: Sucesso dos Anos 90</option>
+                                                        <option>818 - Áudio: Sucessos Românticos</option>
+                                                        <option>819 - Áudio: Trilhas Sonoras</option>
+                                                        <option>644 - AXN HD</option>
+                                                        <option>144 - AXN SD</option>
+                                                        <option>575 - Band Sports HD</option>
+                                                        <option>75 - Band Sports SD</option>
+                                                        <option>583 - Bandnews HD</option>
+                                                        <option>83 - Bandnews SD</option>
+                                                        <option>740 - BBB Mosaico HD</option>
+                                                        <option>741 - BBB 1 HD</option>
+                                                        <option>742 - BBB 2 HD</option>
+                                                        <option>743 - BBB 3 HD</option>
+                                                        <option>744 - BBB 4 HD</option>
+                                                        <option>745 - BBB 5 HD</option>
+                                                        <option>746 - BBB 6 HD</option>
+                                                        <option>747 - BBB 7 HD</option>
+                                                        <option>748 - BBB 8 HD</option>
+                                                        <option>749 - BBB 9 HD</option>
+                                                        <option>750 - BBB 10 HD</option>
+                                                        <option>580 - BBC World News HD</option>
+                                                        <option>87 - BBC World News SD</option>
+                                                        <option>535 - Bis HD</option>
+                                                        <option>35 - Bis SD</option>
+                                                        <option>585 - Bloomberg HD</option>
+                                                        <option>85 - Bloomberg SD</option>
+                                                        <option>656 - Canal Brasil HD</option>
+                                                        <option>156 - Canal Brasil SD</option>
+                                                        <option>525 - Aviso</option>
+                                                        <option>590 - Canal Rural HD</option>
+                                                        <option>591 - Canal do Criador HD</option>
+                                                        <option>531 - Canção Nova HD</option>
+                                                        <option>31 - Canção Nova SD</option>
+                                                        <option>559 - Cartoon Network HD</option>
+                                                        <option>59 - Cartoon Network SD</option>
+                                                        <option>560 - Cartoonito HD</option>
+                                                        <option>60 - Cartoonito SD</option>
+                                                        <option>25 - Canal K SD</option>
+                                                        <option>631 - Canal K HD</option>
+                                                        <option>113 - Canal K SD</option>
+                                                        <option>650 - Cinemax HD</option>
+                                                        <option>150 - Cinemax SD</option>
+                                                        <option>589 - Climatempo</option>
+                                                        <option>89 - Climatempo</option>
+                                                        <option>577 - CNN Brasil HD</option>
+                                                        <option>77 - CNN Brasil SD</option>
+                                                        <option>584 - CNN International</option>
+                                                        <option>84 - CNN International</option>
+                                                        <option>735 - Combate HD</option>
+                                                        <option>235 - Combate SD</option><option>
+                                                        <option>651 - Comedy Central HD</option>
+                                                        <option>151 - Comedy Central SD</option>
+                                                        <option>664 - Curta! HD</option>
+                                                        <option>64 - Curta! SD</option>
+                                                        <option>594 - Discovery Channel HD</option>
+                                                        <option>94 - Discovery Channel SD</option>
+                                                        <option>622 - Discovery Home&Health HD</option>
+                                                        <option>122 - Discovery Home&Health SD</option>
+                                                        <option>550 - Discovery Kids HD</option>
+                                                        <option>50 - Discovery Kids SD</option>
+                                                        <option>601 - Discovery Science HD</option>
+                                                        <option>101 - Discovery Science SD</option>
+                                                        <option>593 - Discovery Theater HD</option>
+                                                        <option>600 - Discovery Turbo HD</option>
+                                                        <option>100 - Discovery Turbo SD</option>
+                                                        <option>621 - Discovery World HD</option>
+                                                        <option>555 - Disney Channel HD</option>
+                                                        <option>55 - Disney Channel SD</option>
+                                                        <option>554 - Dreamworks HD</option>
+                                                        <option>54 - Dreamworks SD</option>
+                                                        <option>556 - Zoomoo HD</option>
+                                                        <option>56 - Zoomoo SD</option>
+                                                        <option>620 - Dog TV HD</option>
+                                                        <option>702 - DW</option>
+                                                        <option>202 - DW</option>
+                                                        <option>626 - E! HD</option>
+                                                        <option>126 - E! SD</option>
+                                                        <option>15 - EPTV Campinas HD</option>
+                                                        <option>14 - EPTV Ribeirão Preto HD</option>
+                                                        <option>570 - ESPN HD</option>
+                                                        <option>70 - ESPN SD</option>
+                                                        <option>571 - ESPN 2 HD</option>
+                                                        <option>71 - ESPN 2 SD</option>
+                                                        <option>572 - ESPN 3 HD</option>
+                                                        <option>72 - ESPN 3 SD</option>
+                                                        <option>573 - ESPN 4 HD</option>
+                                                        <option>73 - ESPN 4 SD</option>
+                                                        <option>569 - ESPN Extra HD</option>
+                                                        <option>69 - ESPN Extra SD</option>
+                                                        <option>660 - Eurochannel HD</option>
+                                                        <option>161 - Eurochannel SD</option>
+                                                        <option>603 - Fashion TV HD</option>
+                                                        <option>134 - Fashion TV SD</option>
+                                                        <option>638 - Film & Arts HD</option>
+                                                        <option>632 - Fish TV HD</option>
+                                                        <option>132 - Fish TV SD</option>
+                                                        <option>619 - Food Network HD</option>
+                                                        <option>119 - Food Network SD</option>
+                                                        <option>588 - Fox News</option>
+                                                        <option>574 - Fox Sports 2 HD</option>
+                                                        <option>74 - Fox Sports 2 SD</option>
+                                                        <option>524 - Futura HD</option>
+                                                        <option>24 - Futura SD</option>
+                                                        <option>643 - FX HD</option>
+                                                        <option>143 - FX SD</option>
+                                                        <option>540 - GloboNews HD</option>
+                                                        <option>40 - GloboNews SD</option>
+                                                        <option>551 - Gloob HD</option>
+                                                        <option>51 - Gloob SD</option>
+                                                        <option>549 - Gloobinho HD</option>
+                                                        <option>49 - Gloobinho SD</option>
+                                                        <option>541 - GNT HD</option>
+                                                        <option>41 - GNT SD</option>
+                                                        <option>568 - Golf Channel HD</option>
+                                                        <option>534 - Guia Vivo TV</option>
+                                                        <option>665 - HBO HD</option>
+                                                        <option>165 - HBO SD</option>
+                                                        <option>666 - HBO 2 HD</option>
+                                                        <option>166 - HBO 2 SD</option>
+                                                        <option>669 - HBO Family HD</option>
+                                                        <option>169 - HBO Family SD</option>
+                                                        <option>672 - HBO Mundi HD</option>
+                                                        <option>172 - HBO Mundi SD</option>
+                                                        <option>667 - HBO Plus HD</option>
+                                                        <option>167 - HBO Plus SD</option>
+                                                        <option>671 - HBO Pop HD</option>
+                                                        <option>171 - HBO Pop SD</option>
+                                                        <option>670 - HBO Signature HD</option>
+                                                        <option>170 - HBO Signature SD</option>
+                                                        <option>673 - HBO Xtreme HD</option>
+                                                        <option>173 - HBO Xtreme SD</option>
+                                                        <option>618 - HGTV HD</option>
+                                                        <option>118 - HGTV SD</option>
+                                                        <option>596 - History HD</option>
+                                                        <option>96 - History SD</option>
+                                                        <option>597 - History 2 HD</option>
+                                                        <option>97 - History 2 SD</option>
+                                                        <option>658 - ID HD</option>
+                                                        <option>158 - ID SD</option>
+                                                        <option>22 - Ideal SD</option>
+                                                        <option>581 - Jovem Pan News HD</option>
+                                                        <option>625 - Lifetime HD</option>
+                                                        <option>125 - Lifetime SD</option>
+                                                        <option>655 - Megapix HD</option>
+                                                        <option>155 - Megapix SD</option>
+                                                        <option>544 - Modo Viagem HD</option>
+                                                        <option>44 - Modo Viagem SD</option>
+                                                        <option>633 - MTV HD</option>
+                                                        <option>133 - MTV SD</option>
+                                                        <option>634 - MTV 00s HD</option>
+                                                        <option>635 - MTV LIVE HD</option>
+                                                        <option>542 - Multishow HD</option>
+                                                        <option>42 - Multishow SD</option>
+                                                        <option>637 - Music Box Brazil HD</option>
+                                                        <option>598 - NAT GEO HD</option>
+                                                        <option>98 - NAT GEO SD</option>
+                                                        <option>561 - Box Kids HD</option>
+                                                        <option>61 - Box Kids SD</option>
+                                                        <option>700 - NHK HD</option>
+                                                        <option>200 - NHK SD</option>
+                                                        <option>552 - Nick Jr. HD</option>
+                                                        <option>52 - Nick Jr. SD</option>
+                                                        <option>558 - Nickelodeon HD</option>
+                                                        <option>58 - Nickelodeon SD</option>
+                                                        <option>536 - OFF HD</option>
+                                                        <option>36 - OFF SD</option>
+                                                        <option>659 - Paramount Network HD</option>
+                                                        <option>159 - Paramount Network SD</option>
+                                                        <option>611 - Markket HD</option>
+                                                        <option>736 - Paramount+ HD</option>
+                                                        <option>737 - Paramount+ 2 HD</option>
+                                                        <option>738 - Paramount+ 3 HD</option>
+                                                        <option>739 - Paramount+ 4 HD</option>
+                                                        <option>222 - Premiere 2 HD</option>
+                                                        <option>722 - Premiere 2 HD</option>
+                                                        <option>223 - Premiere 3 SD</option>
+                                                        <option>723 - Premiere 3 HD</option>
+                                                        <option>224 - Premiere 4 SD</option>
+                                                        <option>724 - Premiere 4 HD</option>
+                                                        <option>225 - Premiere 5 SD</option>
+                                                        <option>725 - Premiere 5 HD</option><option>
+                                                        <option>226 - Premiere 6 SD</option>
+                                                        <option>726 - Premiere 6 HD</option>
+                                                        <option>227 - Premiere 7 SD</option>
+                                                        <option>727 - Premiere 7 HD</option>
+                                                        <option>228 - Premiere 8 SD</option>
+                                                        <option>728 - Premiere 8 HD</option><option>
+                                                        <option>229 - Premiere 9 SD</option>
+                                                        <option>729 - Premiere 9 HD</option>
+                                                        <option>221 - Premiere SD</option>
+                                                        <option>721 - Premiere HD</option>
+                                                        <option>646 - Prime Box Brazil HD</option>
+                                                        <option>146 - Prime Box Brazil SD</option>
+                                                        <option>701 - RAI Itália</option>
+                                                        <option>201 - RAI Itália</option>
+                                                        <option>526 - Rede Brasil HD</option>
+                                                        <option>511 - Rede Século 21 HD</option><option>
+                                                        <option>17 - RedeTV! HD</option>
+                                                        <option>529 - Redevida HD</option>
+                                                        <option>29 - Redevida HD</option>
+                                                        <option>617 - Sabor & Arte HD</option>
+                                                        <option>780 - Sexy Hot</option>
+                                                        <option>280 - Sexy Hot</option>
+                                                        <option>281 - Sexy Privé</option>
+                                                        <option>703 - SIC Internacional</option>
+                                                        <option>203 - SIC Internacional</option>
+                                                        <option>641 - Sony HD</option>
+                                                        <option>141 - Sony HD</option>
+                                                        <option>649 - Space HD</option>
+                                                        <option>149 - Space HD</option>
+                                                        <option>539 - SporTV HD</option>
+                                                        <option>39 - SporTV HD</option>
+                                                        <option>538 - SporTV 2 HD</option>
+                                                        <option>38 - SporTV 2 HD</option>
+                                                        <option>537 - SporTV 3 HD</option>
+                                                        <option>37 - SporTV 3 HD</option>
+                                                        <option>642 - Star Channel HD</option>
+                                                        <option>142 - Star Channel HD</option>
+                                                        <option>624 - Cinecanal HD</option>
+                                                        <option>124 - Cinecanal HD</option>
+                                                        <option>653 - Studio Universal HD</option>
+                                                        <option>153 - Studio Universal HD</option>
+                                                        <option>652 - USA HD</option>
+                                                        <option>152 - USA HD</option>
+                                                        <option>647 - TNT Novelas HD</option>
+                                                        <option>147 - TNT Novelas HD</option>
+                                                        <option>657 - TCM</option>
+                                                        <option>157 - TCM</option>
+                                                        <option>708 - Novidades</option>
+                                                        <option>686 - Telecine Action HD</option>
+                                                        <option>186 - Telecine Action HD</option>
+                                                        <option>690 - Telecine Cult HD</option>
+                                                        <option>190 - Telecine Cult HD</option>
+                                                        <option>688 - Telecine Fun HD</option>
+                                                        <option>188 - Telecine Fun HD</option>
+                                                        <option>689 - Telecine Pipoca HD</option>
+                                                        <option>189 - Telecine Pipoca HD</option>
+                                                        <option>685 - Telecine Premium HD</option>
+                                                        <option>185 - Telecine Premium HD</option>
+                                                        <option>687 - Telecine Touch HD</option>
+                                                        <option>187 - Telecine Touch HD</option>
+                                                        <option>582 - Terra Viva HD</option>
+                                                        <option>623 - TLC HD</option>
+                                                        <option>123 - TLC HD</option>
+                                                        <option>648 - TNT HD</option>
+                                                        <option>148 - TNT HD</option>
+                                                        <option>629 - TNT Series HD</option>
+                                                        <option>129 - TNT Series HD</option>
+                                                        <option>557 - Tooncast</option>
+                                                        <option>57 - Tooncast</option>
+                                                        <option>663 - Vivo Play</option>
+                                                        <option>630 - Trace Brasil HD</option>
+                                                        <option>130 - Trace Brasil HD</option>
+                                                        <option>604 - Travel Box Brazil
+                                                        <option>104 - Travel Box Brazil
+                                                        <option>628 - Adult Swim HD</option>
+                                                        <option>128 - Adult Swim HD</option>
+                                                        <option>707 - Vivo Valoriza</option>
+                                                        <option>530 - TV Aparecida HD</option>
+                                                        <option>30 - TV Aparecida HD</option>
+                                                        <option>503 - TV Brasil HD</option>
+                                                        <option>3 - TV Brasil SD</option>
+                                                        <option>2 - Canal Gov</option>
+                                                        <option>4 - TV Câmara</option>
+                                                        <option>7 - Canal Educação
+                                                        <option>18 - TV Gazeta HD</option>
+                                                        <option>527 - TV Gazeta HD</option>
+                                                        <option>6 - TV Justiça</option>
+                                                        <option>401 - TV Novo Tempo HD</option>
+                                                        <option>553 - TV RáTim Bum HD</option>
+                                                        <option>53 - TV RáTim Bum SD</option>
+                                                        <option>5 - TV Senado</option>
+                                                        <option>705 - TV5Monde</option>
+                                                        <option>205 - TV5Monde</option>
+                                                        <option>706 - TVE</option>
+                                                        <option>206 - TVE</option>
+                                                        <option>654 - Universal TV HD</option>
+                                                        <option>154 - Universal TV SD</option>
+                                                        <option>543 - VIVA HD</option>
+                                                        <option>43 - VIVA HD</option>
+                                                        <option>548 - Youtube Kids</option>
+                                                        <option>48 - Youtube Kids</option>
+                                                        <option>636 - Youtube</option>
+                                                        <option>710 - NETFLIX</option>
+                                                        <option>674 - Prime Video</option>
+                                                        <option>640 - Warner HD</option>
+                                                        <option>140 - Warner SD</option>
+                                                        <option>576 - Woohoo</option>
+                                                        <option>76 - Woohoo</option>
+                                                        <option>711 - Globoplay</option>
+                                                        <option>709 - Disney+</option>
+                                                        <option>731 - Paulistão Play 1</option>
+                                                        <option>732 - Paulistão Play 2</option>
+                                                        <option>733 - Paulistão Play 3</option>
+                                                        <option>612 - LCM+</option>
+                                                    </select>
+                                                </div>
+                                                <!-- Sintoma -->
+                                                <div class="form-group mb-3">
+                                                    <label for="exampleFormControlInput1" class="form-label">Sintoma: </label>
+                                                    <select class="form-select form-control" id="falha" name="falha" multiple>
+                                                        <option></option>
+                                                        <option>Áudio Vídeo Intermitente</option>
+                                                        <option>Áudio Vídeo Sem Sinal</option>
+                                                        <option>Áudio Vídeo Sem Sincronismo</option>
+                                                        <option>Áudio Vídeo Diferente</option>
+                                                        <option>Áudio Vídeo Degradado</option>
+                                                        <option>Áudio Intermitente</option>
+                                                        <option>Áudio Outro Idioma</option>
+                                                        <option>Áudio Sem Sinal</option>
+                                                        <option>Áudio Ausência De L/R</option>
+                                                        <option>Áudio Ruído</option>
+                                                        <option>Áudio Volume</option>
+                                                        <option>Vídeo Color Bar</option>
+                                                        <option>Vídeo Congelado</option>
+                                                        <option>Vídeo Degradado</option>
+                                                        <option>Vídeo Intermitente</option>
+                                                        <option>Vídeo Sem Sinal</option>
+                                                        <option>Vídeo Black</option>
+                                                        <option>Vídeo Cartela</option>
+                                                        <option>Aprovisionamento</option>
+                                                        <option>Empacotamento</option>
+                                                        <option>Blackout Incorreto</option>
+                                                        <option>Canal Bloqueado Senha</option>
+                                                        <option>Canal Não Grava</option>
+                                                        <option>Gravação Não Reproduz</option>
+                                                        <option>Multiroom</option>
+                                                        <option>Avançar, Pausar, Retroceder</option>
+                                                        <option>Stb Erro Inicialização</option>
+                                                        <option>Legenda Ausente</option>
+                                                        <option>Legenda Sem Sincronismo</option>
+                                                        <option>Legenda Outro Idioma</option>
+                                                        <option>Closed Caption</option>
+                                                        <option>Vod Compra</option>
+                                                        <option>Vod Falha Na Reprodução</option>
+                                                        <option>Vod Acesso Ao Catálogo</option>
+                                                        <option>Aplicativo Não Inicia</option>
+                                                        <option>Aplicativo Assinatura</option>
+                                                        <option>Aplicativo Não Reproduz Conteúdo</option>
+                                                        <option>Aplicativo Má Qualidade</option>
+                                                        <option>Aplicativo Falha De Login</option>
+                                                        <option>Vivo Play App Falha De Login</option>
+                                                        <option>Vivo Play App Não Reproduz Conteúdo</option>
+                                                        <option>Vivo Play App Lentidão</option>
+                                                        <option>Vivo Play App Mensagem Erro</option>
+                                                        <option>Epg Incorreta</option>
+                                                        <option>Epg Indisponível</option>
+                                                        <option>Epg Incompleta</option>
+                                                        <option>Ppv Compra</option>
+                                                        <option>Ppv Falha Na Reprodução</option>
+                                                        <option>Ferramenta De Gerencia</option>
+                                                        <option>Alarme No Equipamento</option>
+                                                        <option>Cliente Vip</option>
+                                                    </select>
+                                                </div>
+                                                <!-- Inicio da falha -->
+                                                <div class="form-group mb-3">
+                                                    <label for="exampleFormControlInput1" class="form-label">Início da Falha: </label>
+                                                    <input type="hora" class="form-control" id="hora" name="hora" placeholder="00/00/0000 00h00min">
+                                                </div> 
+                                                <!-- Ferramentas -->
+                                                <div class="form-group mb-3">
+                                                    <label for="exampleFormControlInput1" class="form-label">Ferramentas: </label>     
+                                                    <select class="form-select form-control" id="ferramenta" name="ferramenta" multiple>
+                                                        <option></option>
+                                                        <option>Calicux</option>
+                                                        <option>Netcool</option>
+                                                        <option>Cacti</option>
+                                                        <option>Videowall</option>
+                                                        <option>STB</option>
+                                                        <option>IneoQuest</option>
+                                                        <option>Dataminer</option>
+                                                    </select>
+                                                </div>
+                                                <!-- Área responsável por tratar a falha -->        
+                                                <div class="form-group mb-3">
+                                                    <label for="exampleFormControlInput1" class="form-label">Equipe Responsável: </label>     
+                                                    <select class="form-select form-control" id="responsavel" name="responsavel" multiple>
+                                                        <option></option>
+                                                        <option>P#B#GAB - Ger O&M de TV e Conteudos</option>
+                                                        <option>P#B#GBAC02 - Coord Teleporto HE</option>
+                                                    </select>
+                                                </div>
+                                                <!-- Observações -->
+                                                <div class="mb-3">
+                                                    <label for="exampleFormControlInput1" class="form-label">Observações: </label>  
+                                                    <textarea class="form-control" id="observacoes" rows="5"></textarea>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <a class="btn btn-warning" href="index.html">Limpar</a>
+                                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#carimboModal" onclick="exibirCarimboCanais()">Gerar Carimbo</button>
+                                                </div>        
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>            
+                            </div>    
+                        </div>    
+                    </div>
+                    <!-- /.container-fluid -->
+
+                </div>
+                <!-- End of Main Content -->
+
+                <!-- Footer -->
+                <footer class="sticky-footer bg-white">
+                    <div class="container my-auto">
+                        <div class="copyright text-center my-auto">
+                            <span>Desenvolvido pela área N2 Qualidade VOC.</span>
+                        </div>
+                    </div>
+                </footer>
+                <!-- End of Footer -->
+
+            </div>
+            <!-- End of Content Wrapper -->
+
+        </div>
+        <!-- End of Page Wrapper -->
+
+        <!-- Scroll to Top Button-->
+        <a class="scroll-to-top rounded" href="#page-top">
+            <i class="fas fa-angle-up"></i>
+        </a>
+       
+
+        <!-- Logout Modal-->
+        <div class="modal fade" id="carimboModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Carimbo consolidado</h5>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="col-xl-8 col-lg-6">
+                            <div id="carimbo"></div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" id="btn-copy">Copiar</button>                    
+                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+                
+        <!-- Bootstrap core JavaScript-->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Core plugin JavaScript-->
+        <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+        <!-- Custom scripts for all pages-->
+        <script src="js/carimbo.min.js"></script>
+        <script src="js/select2.min.js"></script>
+        <script src="js/app.js"></script>
+        <!-- script src="js/jquery-3.7.1.min.js"></script -->
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.0/dist/jquery.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+
+        <script>
+            $(document).ready(function() {
+                //Gera o select2 nos select
+                $('#tecnologia, #cluster, #he, #tipo, #lineup, #falha, #ferramenta, #responsavel').select2();
+            });
+        </script>
+
+           
+        
+    </body>
+
+</html>
